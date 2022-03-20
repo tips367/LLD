@@ -1,7 +1,9 @@
 #pragma once
 
+#include <iostream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
@@ -28,6 +30,7 @@ enum ReservationStatus
 {
 	WAITING,
 	PENDING,
+	COMPLETED,
 	CANCELED,
 	NONE
 };
@@ -37,7 +40,6 @@ enum AccountStatus
 	ACTIVE,
 	CLOSED,
 	BLACKLISTED,
-	NONE
 };
 
 class Address
@@ -70,6 +72,11 @@ private:
 	string address;
 	string email;
 	string phone;
+};
+
+class Author: public Person
+{
+	string description;
 };
 
 static int MAX_BOOK_ISSUED_TO_A_USER = 5;

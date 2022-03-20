@@ -140,11 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="BookItem.cpp" />
+    <ClCompile Include="BookLending.cpp" />
+    <ClCompile Include="BookReservation.cpp" />
+    <ClCompile Include="Fine.cpp" />
     <ClCompile Include="Library Management System.cpp" />
+    <ClCompile Include="Search.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\HotelManagementSystem\common.h" />
     <ClInclude Include="Account.h" />
+    <ClInclude Include="BookItem.h" />
+    <ClInclude Include="BookLending.h" />
+    <ClInclude Include="BookReservation.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="Fine.h" />
+    <ClInclude Include="Search.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
