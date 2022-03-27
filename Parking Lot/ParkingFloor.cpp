@@ -1,23 +1,23 @@
 #include "ParkingFloor.h"
 
-void ParkingFloor::addParkingSpot(const ParkingSpot& spot)
+void ParkingFloor::addParkingSpot(ParkingSpot& spot)
 {
 	switch (spot.getSpotType())
 	{
 	case ParkingSpotType::HANDICAPPED:
-		handicappedSpots[spot.getNumber()] = spot;
+		handicappedSpots[spot.getNumber()] = dynamic_cast<HandicappedSpot&>(spot);
 		break;
 	case ParkingSpotType::COMPACT:
-		compactSpots[spot.getNumber()] = spot;
+		compactSpots[spot.getNumber()] = dynamic_cast<CompactSpot&>(spot);;
 		break;
 	case ParkingSpotType::LARGE:
-		largeSpots[spot.getNumber()] = spot;
+		largeSpots[spot.getNumber()] = dynamic_cast<LargeSpot&>(spot);;
 		break;
 	case ParkingSpotType::MOTORBIKE:
-		motorbikeSpots[spot.getNumber()] = spot;
+		motorbikeSpots[spot.getNumber()] = dynamic_cast<MotorbikeSpot&>(spot);;
 		break;
 	case ParkingSpotType::ELECTRIC:
-		electricSpots[spot.getNumber()] = spot;
+		electricSpots[spot.getNumber()] = dynamic_cast<ElectricSpot&>(spot);;
 		break;
 	default:
 		cout << "Wrong parking type" << endl;

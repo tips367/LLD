@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common.h"
+#include "ParkingTicket.h"
 
 class Vehicle
 {
